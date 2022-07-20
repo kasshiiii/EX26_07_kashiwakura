@@ -6,7 +6,6 @@ public class Bos_Class
     static void Main()
     {
         Box box = new Box(InputUtility.InputFloat(), InputUtility.InputFloat(), InputUtility.InputFloat());
-        //Box box = new Box(10, 10, 10);
         Console.WriteLine(box.GetSurface());
         Console.WriteLine(box.GetVolume());
 
