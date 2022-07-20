@@ -1,14 +1,25 @@
 ﻿using System;
-using InputUtilitys;
 
 public class Bos_Class
 {
     static void Main()
     {
-        Box box = new Box(InputUtility.InputFloat(), InputUtility.InputFloat(), InputUtility.InputFloat());
+        Box box = new Box(InputFloat("幅を入力してください"), InputFloat("高さを入力してください"), InputFloat("奥行きを入力してください"));
         Console.WriteLine(box.GetSurface());
         Console.WriteLine(box.GetVolume());
+    }
 
+    static float InputFloat(string outputString)
+    {
+        float input;
+        while (true)
+        {
+            Console.WriteLine(outputString);
+            if(float.TryParse(Console.ReadLine(), out input))
+            {
+                return input;
+            }
+        }
     }
 }
 class Box
@@ -28,6 +39,6 @@ class Box
     }
     public float GetVolume()
     {
-        return depth*width*depth;
+        return width*height*depth;
     }
 }
