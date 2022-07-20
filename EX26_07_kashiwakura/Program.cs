@@ -1,6 +1,6 @@
 ﻿using System;
 
-public class Bos_Class
+public class Box_Class
 {
     static void Main()
     {
