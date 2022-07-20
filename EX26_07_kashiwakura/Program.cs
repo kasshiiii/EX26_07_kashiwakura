@@ -24,9 +24,7 @@ public class Bos_Class
 }
 class Box
 {
-    float width;
-    float height;
-    float depth;
+    float width,height,depth;
     public Box(float width,float height,float depth)
     {
         this.width = width;
