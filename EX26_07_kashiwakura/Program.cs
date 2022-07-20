@@ -5,8 +5,8 @@ public class Bos_Class
     static void Main()
     {
         Box box = new Box(InputFloat("幅を入力してください"), InputFloat("高さを入力してください"), InputFloat("奥行きを入力してください"));
-        Console.WriteLine(box.GetSurface());
-        Console.WriteLine(box.GetVolume());
+        Console.WriteLine("表面積 = "+box.GetSurface());
+        Console.WriteLine("体積 = "+box.GetVolume());
     }
 
     static float InputFloat(string outputString)
@@ -33,7 +33,7 @@ class Box
     }
     public float GetSurface()
     {
-        return width*height*6;
+        return (width*height+width*depth+height*depth)*2;
     }
     public float GetVolume()
     {
